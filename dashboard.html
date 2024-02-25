@@ -1,0 +1,21 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Dashboard, {{ user.username }}</h1>
+        <div class="user-details">
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Bio:</strong> {{ user.bio }}</p>
+            <p><strong>Phone Number:</strong> {{ user.phone_number }}</p>
+        </div>
+        <a href="{{ url_for('update_profile') }}" class="btn btn-primary">Update Profile</a>
+    </div>
+</body>
+</html>
